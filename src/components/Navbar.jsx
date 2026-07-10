@@ -17,6 +17,12 @@ export default function Navbar() {
         <button className="bg-red-600 px-5 py-2 rounded-lg hover:bg-red-700 transition shadow-md font-semibold">
           تسجيل الخروج
         </button>
+        <button
+          className=" text-slate-100 text-2xl"
+          onClick={() => setSidebarOpen(true)}
+        >
+          ☰
+        </button>
       </div>
     </div>
   );
