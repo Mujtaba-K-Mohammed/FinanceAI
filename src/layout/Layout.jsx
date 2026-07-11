@@ -11,7 +11,7 @@ export default function Layout({ children }) {
       <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
 
       {/* Main Content */}
-      <div className="flex-1 w-full flex flex-col">
+      <div className="flex-1 w-full flex flex-col min-h-screen">
         {/* Navbar */}
         <Navbar setSidebarOpen={setSidebarOpen} />
 
