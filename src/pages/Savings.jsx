@@ -9,42 +9,44 @@ export default function Savings() {
 
   return (
     <Layout>
-      <h1 className="text-3xl font-bold mb-6">المدخرات</h1>
+      <div className="p-4 sm:p-5 md:p-6 space-y-8">
+        <h1 className="text-3xl font-bold">المدخرات</h1>
 
-      <div className="bg-slate-900 p-5 rounded-xl border border-slate-800 shadow-lg">
-        {/* زر إضافة هدف ادخار */}
-        <button className="mb-4 bg-emerald-600 px-5 py-2 rounded-lg shadow-md hover:bg-emerald-700 transition">
-          + إضافة هدف ادخار
-        </button>
+        <div className="bg-slate-900 p-5 rounded-xl border border-slate-800 shadow-lg">
+          {/* زر إضافة هدف ادخار */}
+          <button className="mb-4 bg-emerald-600 px-5 py-2 rounded-lg shadow-md hover:bg-emerald-700 transition">
+            + إضافة هدف ادخار
+          </button>
 
-        <table className="w-full text-left text-lg">
-          <thead>
-            <tr className="border-b border-slate-800 hover:bg-slate-800/50 transition">
-              <th className="py-3">الهدف</th>
-              <th className="py-3">المبلغ المدخر</th>
-              <th className="py-3">خيارات</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            {data.map((item, index) => (
-              <tr key={index} className="border-b border-slate-800">
-                <td className="py-3">{item.goal}</td>
-                <td className="py-3 text-sky-400">${item.saved}</td>
-
-                <td className="py-3">
-                  <button className="bg-blue-600 px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 transition mr-2">
-                    تعديل
-                  </button>
-
-                  <button className="bg-red-600 px-4 py-2 rounded-lg shadow-md hover:bg-red-700 transition">
-                    حذف
-                  </button>
-                </td>
+          <table className="w-full text-left text-lg">
+            <thead>
+              <tr className="border-b border-slate-800 hover:bg-slate-800/50 transition">
+                <th className="py-3">الهدف</th>
+                <th className="py-3">المبلغ المدخر</th>
+                <th className="py-3">خيارات</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+
+            <tbody>
+              {data.map((item, index) => (
+                <tr key={index} className="border-b border-slate-800">
+                  <td className="py-3">{item.goal}</td>
+                  <td className="py-3 text-sky-400">${item.saved}</td>
+
+                  <td className="py-3">
+                    <button className="bg-blue-600 px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 transition mr-2">
+                      تعديل
+                    </button>
+
+                    <button className="bg-red-600 px-4 py-2 rounded-lg shadow-md hover:bg-red-700 transition">
+                      حذف
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     </Layout>
   );
