@@ -44,28 +44,31 @@ export default function Dashboard() {
             بنسبة 10%.
           </p>
         </div>
-
         {/* Income Chart */}
-        <div className="space-y-2">
-          <p className="text-slate-300 text-sm md:text-base">
-            رسم بياني للدخل الشهري
-          </p>
+        <div className="flex items-center gap-4">
+          <div className="flex flex-col text-slate-300 text-sm md:text-base leading-tight text-center">
+            <span>Monthly</span>
+            <span>Income</span>
+            <span>Chart</span>
+          </div>
 
-          <div className="w-full h-[220px] sm:h-[300px] md:h-[380px] lg:h-[420px]">
+          <div className="flex-1 h-[220px] sm:h-[300px] md:h-[380px] lg:h-[420px]">
             <IncomeChart />
           </div>
         </div>
 
         {/* Expenses Chart */}
-        <div className="space-y-2">
-          <p className="text-slate-300 text-sm md:text-base">
-            رسم بياني للمصاريف الشهرية
-          </p>
+        <div className="flex items-center gap-4">
+          <div className="flex flex-col text-slate-300 text-sm md:text-base leading-tight text-center">
+            <span>Monthly</span>
+            <span>Expenses</span>
+            <span>Chart</span>
+          </div>
 
-          <div className="w-full h-[220px] sm:h-[300px] md:h-[380px] lg:h-[420px]">
+          <div className="flex-1 h-[220px] sm:h-[300px] md:h-[380px] lg:h-[420px]">
             <ExpensesChart />
           </div>
-        </div>
+        </div>ذ
       </div>
     </Layout>
   );
