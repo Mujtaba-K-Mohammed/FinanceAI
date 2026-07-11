@@ -45,30 +45,48 @@ export default function Dashboard() {
           </p>
         </div>
         {/* Income Chart */}
-        <div className="flex items-center gap-4">
-          <div className="flex flex-col text-slate-300 text-sm md:text-base leading-tight text-center">
-            <span>Monthly</span>
-            <span>Income</span>
-            <span>Chart</span>
+        <div className="w-full space-y-4">
+          {/* النص في اللابتوب فوق الرسم البياني */}
+          <div className="hidden md:block text-slate-300 text-lg font-semibold">
+            Monthly Income Chart
           </div>
 
-          <div className="flex-1 h-[220px] sm:h-[300px] md:h-[380px] lg:h-[420px]">
-            <IncomeChart />
+          <div className="flex md:flex-col items-center gap-4">
+            {/* النص في التلفون جنب الرسم البياني */}
+            <div className="md:hidden flex flex-col text-slate-300 text-sm leading-tight text-center">
+              <span>Monthly</span>
+              <span>Income</span>
+              <span>Chart</span>
+            </div>
+
+            {/* الرسم البياني */}
+            <div className="flex-1 w-full h-[220px] sm:h-[300px] md:h-[380px] lg:h-[420px]">
+              <IncomeChart />
+            </div>
           </div>
         </div>
 
         {/* Expenses Chart */}
-        <div className="flex items-center gap-4">
-          <div className="flex flex-col text-slate-300 text-sm md:text-base leading-tight text-center">
-            <span>Monthly</span>
-            <span>Expenses</span>
-            <span>Chart</span>
+        <div className="w-full space-y-4">
+          {/* النص في اللابتوب فوق الرسم البياني */}
+          <div className="hidden md:block text-slate-300 text-lg font-semibold">
+            Monthly Expenses Chart
           </div>
 
-          <div className="flex-1 h-[220px] sm:h-[300px] md:h-[380px] lg:h-[420px]">
-            <ExpensesChart />
+          <div className="flex md:flex-col items-center gap-4">
+            {/* النص في التلفون جنب الرسم البياني */}
+            <div className="md:hidden flex flex-col text-slate-300 text-sm leading-tight text-center">
+              <span>Monthly</span>
+              <span>Expenses</span>
+              <span>Chart</span>
+            </div>
+
+            {/* الرسم البياني */}
+            <div className="flex-1 w-full h-[220px] sm:h-[300px] md:h-[380px] lg:h-[420px]">
+              <ExpensesChart />
+            </div>
           </div>
-        </div>ذ
+        </div>
       </div>
     </Layout>
   );
