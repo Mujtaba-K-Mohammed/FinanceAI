@@ -5,7 +5,7 @@ import ExpensesChart from "../components/ExpensesChart";
 export default function Dashboard() {
   return (
     <Layout>
-      <div className="p-4 sm:p-5 md:p-6 space-y-8">
+      <div className="p-4 sm:p-5 md:p-6 space-y-4 md:space-y-8">
         <h1 className="text-2xl md:text-3xl font-bold">لوحة التحكم</h1>
 
         {/* Cards */}
@@ -70,4 +70,3 @@ export default function Dashboard() {
     </Layout>
   );
 }
-  
