@@ -45,12 +45,12 @@ export default function Dashboard() {
       </div>
 
       {/* Income Chart */}
-      <div className="w-full h-[240px] sm:h-[300px] md:h-[420px] lg:h-[480px] mb-6">
+      <div className="w-full h-[260px] sm:h-[320px] md:h-[420px] lg:h-[480px] mb-8">
         <IncomeChart />
       </div>
 
       {/* Expenses Chart */}
-      <div className="w-full h-[240px] sm:h-[300px] md:h-[420px] lg:h-[480px] mb-6">
+      <div className="w-full h-[260px] sm:h-[320px] md:h-[420px] lg:h-[480px] mb-8">
         <ExpensesChart />
       </div>
     </Layout>
