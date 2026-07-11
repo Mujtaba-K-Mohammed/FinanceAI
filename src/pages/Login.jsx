@@ -1,4 +1,12 @@
+import { useRef, useEffect } from "react";
+
 export default function Login() {
+  const emailRef = useRef(null);
+
+  useEffect(() => {
+    emailRef.current?.focus();
+  }, []);
+
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center">
       <div className="bg-white p-8 rounded-xl shadow-lg w-full max-w-sm">
@@ -12,6 +20,7 @@ export default function Login() {
               البريد الإلكتروني
             </label>
             <input
+              ref={emailRef}
               type="email"
               className="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="example@gmail.com"
