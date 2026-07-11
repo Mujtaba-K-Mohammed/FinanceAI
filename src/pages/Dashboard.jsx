@@ -60,12 +60,13 @@ export default function Dashboard() {
             </p>
           </div>
 
-          {/* Charts */}
-          <div className="w-full h-[250px] sm:h-[300px] md:h-[400px] mb-6">
+          {/* Income Chart */}
+          <div className="w-full h-[220px] sm:h-[280px] md:h-[380px] mb-6">
             <IncomeChart />
           </div>
 
-          <div className="w-full h-[250px] sm:h-[300px] md:h-[400px] mb-6">
+          {/* Expenses Chart */}
+          <div className="w-full h-[220px] sm:h-[280px] md:h-[380px] mb-6">
             <ExpensesChart />
           </div>
         </div>
