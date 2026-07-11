@@ -18,34 +18,38 @@ export default function Savings() {
             + إضافة هدف ادخار
           </button>
 
-          <table className="w-full text-left text-lg">
-            <thead>
-              <tr className="border-b border-slate-800 hover:bg-slate-800/50 transition">
-                <th className="py-3">الهدف</th>
-                <th className="py-3">المبلغ المدخر</th>
-                <th className="py-3">خيارات</th>
-              </tr>
-            </thead>
-
-            <tbody>
-              {data.map((item, index) => (
-                <tr key={index} className="border-b border-slate-800">
-                  <td className="py-3">{item.goal}</td>
-                  <td className="py-3 text-sky-400">${item.saved}</td>
-
-                  <td className="py-3">
-                    <button className="bg-blue-600 px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 transition mr-2">
-                      تعديل
-                    </button>
-
-                    <button className="bg-red-600 px-4 py-2 rounded-lg shadow-md hover:bg-red-700 transition">
-                      حذف
-                    </button>
-                  </td>
+          {/* جدول متجاوب */}
+          <div className="overflow-x-auto rounded-xl">
+            <table className="w-full text-left text-base md:text-lg">
+              <thead>
+                <tr className="border-b border-slate-800 bg-slate-800/30">
+                  <th className="py-3 px-2">الهدف</th>
+                  <th className="py-3 px-2">المبلغ المدخر</th>
+                  <th className="py-3 px-2">خيارات</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+
+              <tbody>
+                {data.map((item, index) => (
+                  <tr key={index} className="border-b border-slate-800">
+                    <td className="py-3 px-2">{item.goal}</td>
+
+                    <td className="py-3 px-2 text-sky-400">${item.saved}</td>
+
+                    <td className="py-3 px-2 flex flex-wrap gap-2">
+                      <button className="bg-blue-600 px-3 py-2 rounded-lg shadow-md hover:bg-blue-700 transition text-sm">
+                        تعديل
+                      </button>
+
+                      <button className="bg-red-600 px-3 py-2 rounded-lg shadow-md hover:bg-red-700 transition text-sm">
+                        حذف
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </Layout>
