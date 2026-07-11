@@ -19,8 +19,6 @@ const data = [
 export default function ExpensesChart() {
   return (
     <div className="bg-slate-900 p-6 rounded-xl border border-slate-800 shadow-lg mt-8 hover:shadow-2xl transition">
-      <h2 className="text-xl font-bold mb-5">رسم بياني للمصاريف الشهرية</h2>
-
       <ResponsiveContainer width="100%" height={320}>
         <BarChart data={data}>
           <CartesianGrid strokeDasharray="4 4" stroke="#475569" />

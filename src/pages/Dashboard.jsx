@@ -45,13 +45,25 @@ export default function Dashboard() {
       </div>
 
       {/* Income Chart */}
-      <div className="w-full h-[260px] sm:h-[320px] md:h-[420px] lg:h-[480px] mb-8">
-        <IncomeChart />
+      <div className="flex items-center gap-4">
+        <span className="vertical-text text-slate-300 text-sm md:text-base">
+          رسم بياني للدخل الشهري
+        </span>
+
+        <div className="flex-1 h-[300px] sm:h-[350px] md:h-[420px] lg:h-[480px]">
+          <IncomeChart />
+        </div>
       </div>
 
       {/* Expenses Chart */}
-      <div className="w-full h-[260px] sm:h-[320px] md:h-[420px] lg:h-[480px] mb-8">
-        <ExpensesChart />
+      <div className="flex items-center gap-4">
+        <span className="vertical-text text-slate-300 text-sm md:text-base">
+          رسم بياني للمصاريف الشهرية
+        </span>
+
+        <div className="flex-1 h-[300px] sm:h-[350px] md:h-[420px] lg:h-[480px]">
+          <ExpensesChart />
+        </div>
       </div>
     </Layout>
   );
