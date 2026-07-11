@@ -9,11 +9,21 @@ export default function Navbar({ setSidebarOpen }) {
         ☰
       </button>
 
+      {/* عنوان الترحيب */}
       <h1 className="text-xl font-bold">مرحباً، مجتبى 👋</h1>
 
-      <button className="bg-red-600 hover:bg-red-700 px-4 py-2 rounded-lg">
-        تسجيل الخروج
-      </button>
+      {/* أزرار اليمين */}
+      <div className="flex items-center gap-4">
+        {/* زر الإشعارات */}
+        <button className="text-slate-100 text-2xl hover:text-emerald-400 transition">
+          🔔
+        </button>
+
+        {/* زر تسجيل الخروج */}
+        <button className="bg-red-600 hover:bg-red-700 px-4 py-2 rounded-lg">
+          تسجيل الخروج
+        </button>
+      </div>
     </nav>
   );
 }
